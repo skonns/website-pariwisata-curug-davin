@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Pariwisata Curug Bogor">
+    <meta name="description" content="Selamat datang di website resmi Pariwisata Curug Bogor, destinasi alam yang memukau dan menyuguhkan keindahan alam yang tak terlupakan. Terletak di kawasan yang hijau dan sejuk, Curug Bogor menawarkan pengalaman wisata alam yang menyegarkan bagi para pengunjung.">
+    <meta property="og:image" content="https://i.ibb.co/PgRcSS8/logo.png">
+    <title>Destinasi Pariwisata</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        } */
+
+        /* nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        article {
+            box-sizing: border-box;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        article h2 {
+            margin: 10px;
+        }
+
+        article p {
+            margin: 0 10px 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        span {
+            display: none;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pariwisata Indonesia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="destinasi.html">Destinasi</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <article>
+            <img src="img/curug.jpg" alt="Destinasi 1" onclick="openModal('destinasi1.jpg', 'Destinasi Wisata 1')">
+            <h2>Destinasi Wisata 1</h2>
+            <p>Deskripsi destinasi wisata yang menarik. <span id="readMore1" style="display:none;">Informasi lebih lanjut tentang destinasi ini...</span></p>
+            <button onclick="toggleReadMore('readMore1')">Baca Selengkapnya</button>
+        </article>
+
+        <article>
+            <img src="img/curug1.jpg" alt="Destinasi 2" onclick="openModal('destinasi2.jpg', 'Destinasi Wisata 2')">
+            <h2>Destinasi Wisata 2</h2>
+            <p>Deskripsi destinasi wisata yang menarik. <span id="readMore2" style="display:none;">Informasi lebih lanjut tentang destinasi ini...</span></p>
+            <button onclick="toggleReadMore('readMore2')">Baca Selengkapnya</button>
+        </article>
+    </section>
+
+    <script>
+        function toggleReadMore(elementId) {
+            var moreText = document.getElementById(elementId);
+            var buttonText = document.querySelector(`[onclick="toggleReadMore('${elementId}')"]`);
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                buttonText.innerHTML = "Baca Kurang";
+            } else {
+                moreText.style.display = "none";
+                buttonText.innerHTML = "Baca Selengkapnya";
+            }
+        }
+    </script>
+
+</body>
+</html>

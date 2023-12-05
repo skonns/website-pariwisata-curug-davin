@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Pariwisata Curug Bogor">
+    <meta name="description" content="Selamat datang di website resmi Pariwisata Curug Bogor, destinasi alam yang memukau dan menyuguhkan keindahan alam yang tak terlupakan. Terletak di kawasan yang hijau dan sejuk, Curug Bogor menawarkan pengalaman wisata alam yang menyegarkan bagi para pengunjung.">
+    <meta property="og:image" content="https://i.ibb.co/PgRcSS8/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kulineran Bogor</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.prinsh.com/NathanPrinsley-textstyle/nprinsh-stext.css"/>
+</head>
+<body>
+    <header>
+        <h1>Kuliner Top Jawa Barat</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <!-- <li><a href="destinasi.html">Destinasi</a></li> -->
+                <li><a href="kuliner.html">Kuliner</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="main-content">
+        <article>
+            <img src="img/soto-pak-salam.jpg" alt="Destinasi 1" onclick="openModal('destinasi1.jpg', 'Destinasi Wisata 1')">
+            <h2>Soto Pak Salam Bogor</h2>
+            <p>Meski hanya berupa tenda pinggir jalan, namun jangan tanya antrean orang-orang yang ingin makan soto kuning khas Bogor yang legendaris ini. Orang biasanya sudah mulai antri sejak siang hari untuk mencicipi soto Bogor Pak Salam ini. Soal rasa tak perlu diragukan lagi. Anda bisa memilih sendiri jenis daging yang diinginkan; ada kikil sapi, limpa, paru, usus dan babat. Pelengkapnya pun ada banyak, seperti perkedel kentang yang juara, sate kentang dan sate jengkol.</span></p>
+            <button onclick="toggleReadMore('readMore1')">Baca Selengkapnya</button>
+        </article>
+    
+        <article>
+            <img src="img/cungkring.png" alt="Destinasi 2" onclick="openModal('destinasi2.jpg', 'Destinasi Wisata 2')">
+            <h2>Cungkring Pak Jumat</h2>
+            <p>Cungkring Pak Jumat bertempat di kawasan Suryakencana yang terkenal sebagai salah satu sentra kuliner Bogor. Namun siapa sangka ternyata cungkring legendaris inilah yang menjadi pemicu berjamurnya pedagang kuliner di sepanjang jalan tersebut.</span></p>
+            <button onclick="toggleReadMore('readMore2')">Baca Selengkapnya</button>
+        </article>
+        
+        <article>
+            <img src="img/martabak.jpeg" alt="Destinasi 3" onclick="openModal('destinasi3.jpg', 'Destinasi Wisata 3')">
+            <h2>Martabak Ncek</h2>
+            <p>Ini salah satu martabak wishlist saya. Lokasinya ada di belokan sebelum Indomaret Suryakencana. Kalau kalian mau ke sini pas weekend atau hari libur, sebaiknya pas pagi. Saya pernah ke sini pas hari libur dan udah kehabisan pas jam 2 siang. Saya akhirnya kebagian karena dateng pas weekdays. Saya mencoba : 1. Martabak Mania 1/2 Coklat 1/2 Keju (Rp. 60.000). Martabaknya dimasak di atas arang sehingga ada aroma smokey khas arang di bagian tertentu.
+            <span id="readMore3" style="display:none;">Informasi lebih lanjut tentang destinasi ini...</span></p>
+            <button onclick="toggleReadMore('readMore3')">Baca Selengkapnya</button>
+        </article>
+    </section>
+    <section class="main-content">
+        <article>
+            <img src="img/sop-buah.jpeg" alt="Destinasi 1" onclick="openModal('destinasi1.jpg', 'Destinasi Wisata 1')">
+            <h2>Sop Buah Pak Ewok</h2>
+            <p>Kuliner legendaris yang satu ini sekarang memiliki dua cabang, yaitu di samping IPB Botani dan Jalan Haur Jaya. Anda bebas pilih mau melipir ke cabang yang mana karena sama enaknya. Perpaduan aneka buah segar dengan susu akan memanjakan lidah Anda. Sop duriannya paling juara, lho!.
+            <span id="readMore1" style="display:none;">Informasi lebih lanjut tentang destinasi ini .</span></p>
+            <button onclick="toggleReadMore('readMore1')">Baca Selengkapnya</button>
+        </article>
+    
+        <article>
+            <img src="img/lumpia.jpeg" alt="Destinasi 2" onclick="openModal('destinasi2.jpg', 'Destinasi Wisata 2')">
+            <h2>Lumpia Basah Suryakencana</h2>
+            <p>Menyusuri Jalan Suryakencana siap-siap disambut aroma lumpia basah yang tengah dimasak. Aromanya begitu menggoda dan menggugah selera! Lumpia basah khas Gang Aut Bogor ini isinya sederhana; bengkoang, tahu goreng, tauge dan telur. Tapi urusan rasa, jempolan deh!. <span id="readMore2" style="display:none;">Informasi lebih lanjut tentang destinasi ini...</span></p>
+            <button onclick="toggleReadMore('readMore2')">Baca Selengkapnya</button>
+        </article>
+        
+        <article>
+            <img src="img/soto.jpg" alt="Destinasi 3" onclick="openModal('destinasi3.jpg', 'Destinasi Wisata 3')">
+            <h2>Soto Mie Agih</h2>
+            <p>Bukannya menggunakan daging ayam seperti soto mie pada umumnya, soto mie Agih menggunakan daging dan jeroan babi sebagai toppingnya. Ada juga babat yang lembut dan juga empuk yang selalu buat nagih!.</span></p>
+            <button onclick="toggleReadMore('readMore3')">Baca Selengkapnya</button>
+        </article>
+    </section>
+    
+    <script>
+        function toggleReadMore(elementId) {
+            var moreText = document.getElementById(elementId);
+            var buttonText = document.getElementById(elementId + 'Btn');
+    
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                buttonText.innerHTML = "Baca Kurang";
+            } else {
+                moreText.style.display = "none";
+                buttonText.innerHTML = "Baca Selengkapnya";
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2023 Pariwisata Indonesia By Davin</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
